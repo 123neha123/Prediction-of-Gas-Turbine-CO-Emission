@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock title %}
+
+{% block body %}
+<h1 class="text-center">Prediction of Gas Turbine CO</h1><br>
+<h3 class="text-left">Description:</h3>
+<p class="text-left">Predict the Gas Turbine CO Emission using 11 
+    sensor measures aggregated over one hour (by means of average orsum) from a gas turbine 
+    located in Turkey's north western region for the purpose of studying flue gas emissions,
+    namely CO and NOx (NO + NO2)</p>
+
+<h3 class="text-left">Motivation:</h3>
+<p class="text-left"> Harmful effect of Flue gas emitted from power 
+    plant turbines on environment has always been a substantial concern. 
+    In the recent past years many peaceful protest to save environment has been seen. 
+    Environmental organization that seeks to protect, analyse or monitor the environment 
+    have conducted many events and activities to raise people awareness on environment. 
+    This project aims to predict emission of flue gases based on sensor data from gas
+     turbine and various Machine Learning techniques.</p>
+
+    <p>ML model can be used to predict/estimate amount of emission 
+    for future operations of Turbine and Turbine of same homologus series. 
+    Model output can also be used for validation and backing up of costly continuous 
+    emission monitoring systems used in gas-turbine-based power plants. 
+    Their implementation relies on the availability of appropriate and ecologically valid data.</p><br>
+
+<a href="{{url_for('prediction')}}" type = "button-center" ><p style="text-align:center">Click here to make some prediction</p></a>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+
+
+{% endblock body %}

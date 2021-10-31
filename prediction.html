@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %} Prediction {% endblock title %}
+
+{% block body %}
+
+<h1 class="text-center">Make Some Prediction</h1>
+
+<form class="text-center" method="POST" action="/prediction">
+    {{ form.hidden_tag() }}
+    Ambient temperature in Celcius &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;{{form.AT}}<br>
+    Air filter difference pressure in mbar &nbsp; &nbsp;&nbsp;&nbsp;{{form.AFDP}}<br>
+    Gas turbine exhaust pressure in mbar &nbsp;&nbsp;&nbsp;&nbsp;{{form.GTEP}}<br>
+    Turbine inlet temperature in Celcius &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{form.TIT}}<br>
+    Turbine after temperature in Celcius &nbsp; &nbsp;&nbsp; &nbsp;{{form.TAT}}<br>
+    Turbine energy yield in MWH &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {{form.TEY}}<br>
+    Compressor discharge pressure in mbar {{form.CDP}}<br>
+    {{form.submit}}
+</form>
+
+
+{% endblock body %}
